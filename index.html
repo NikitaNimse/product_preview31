@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview</title>
+    <style>
+           body{
+               
+        min-height:100vh;
+        background-image: linear-gradient( 135deg, #FFF3B0 10%, #CA26FF 100%);
+   
+           }
+  #main-prodimg{
+    width:300px;
+    height:300px;
+    border:1px solid black;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+    display: block;
+    margin:20px auto;
+  }
+  .pro-img{
+    height:70px;
+    width:70px;
+    border:1px solid black;
+    border-radius:5px;
+    margin:10px;
+    cursor:pointer;
+    
+   
+  }
+   .pro-img-container{
+    display:flex;
+    justify-content: center;
+   }
+
+    </style>
+</head>
+<body>
+    <h1>Product Preview Page</h1>
+    <img src="HP-Laptop.jpeg" class=""id="main-prodimg"/>
+
+    <div class="pro-img-container">
+    <img src="HP-Laptop.jpeg" class="pro-img" onclick="changeimg(1)"/>
+    <img src="hp-laptop.jpg" class="pro-img"  onclick="changeimg(2)"/>
+    <img src="HP.jpeg" class="pro-img"  onclick="changeimg(3)" />
+    <img src="lap_img.jpeg" class="pro-img"  onclick="changeimg(4)"/>
+</div>
+<script>
+    function  changeimg(num){
+        const mainimg=document.getElementById('main-prodimg');
+        if(num==1){
+            mainimg.src="HP-Laptop.jpeg";
+
+        }
+        else if(num==2){
+            mainimg.src="hp-laptop.jpg";
+        }
+        else if(num==3){
+            mainimg.src="HP.jpeg";
+        }
+        else if(num==4){
+            mainimg.src="lap_img.jpeg";
+        }
+
+    }
+</script>
+</body>
+</html>
